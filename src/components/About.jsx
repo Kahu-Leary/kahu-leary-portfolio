@@ -27,15 +27,23 @@ export default function About () {
     if (!author) return <div>Loading...</div>
 
     return (
-        <main className='relative bg-gray-200 min-h-screen'>
-            <div className='p-10 lg:pt-48 container mx-auto relative'>
-                <section className='bg-white rounded-lg shadow-2xl lg:flex p-20'>
-                    <img className='object-cover rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' src={urlFor(author.authorImage).url()} alt={author.name}/>
+        <main className='relative min-h-screen'>
+            <div className='lg:overflow-hidden'>
+                <div className='absolute inset-0 z-negative lg:opacity-60'>
+                    <video autoPlay muted loop className='object-cover w-full h-full'>
+                        <source src={video} />
+                    </video>
+                </div>
+            </div>
+            <div className='p-10 lg:pt-48 container mx-auto relative '>
+                <section className='bg-gray-900 justify-center shadow-2xl lg:flex p-32'>
+                    <img className='object-cover rounded w-32 h-32 lg:w-64 lg:h-64 mr-28' src={urlFor(author.authorImage).url()} alt={author.name}/>
                     <div className='text-lg flex flex-col justify-center'>
-                        <h1 className='text-6xl text-secondary mb-4'>
-                            Hey there, I'm{" "} <span className='text-blue-700'>{author.name}</span>
+                        <h1 className='text-gray-200 text-6xl text-secondary mb-4'>
+                            Hey there, I'm{" "} <span className='text-primary'>{author.name}</span>
+                            {/* <span className='text-primary'>{author.name}</span> */}
                         </h1>
-                        <div className='prose lg:prose-xl text-primary'>
+                        <div className='prose lg:prose-xl text-gray-200'>
                             <BlockContent blocks={author.bio} projectId='ttbbel5d' dataset='production' />
                         </div>
                     </div>

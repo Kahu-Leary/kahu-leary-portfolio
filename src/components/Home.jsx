@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Project from './Project'
+import About from './About'
+import Contact from './Contact'
 import video from '../video/plexus.mp4'
 
 export default function Home () {
@@ -25,11 +28,10 @@ export default function Home () {
                 <button className='bg-transparent py-4 px-12 mt-20 text-xl 
                 hover:bg-blue-600 border-2 border-blue-600 transition duration-700'>Contact Me</button>
             </section>
-            <section className='bg-secondary -mt-24 relative min-h-screen pt-12 lg:pt-44 px-8'>
-                <div className='container mx-auto'>
-                    <h1>test content</h1>
-                </div>
-            </section>
+
+            <Project />
+            <Contact />
+            <About />
         </main>
         </>
     )

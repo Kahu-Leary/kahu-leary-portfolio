@@ -44,7 +44,7 @@ export default function Project () {
                         <div className='bg-white bg-opacity-75 rounded p-12'>
                             <h1 className='text-3xl lg:text-6xl mb-4'>{singlePost.title}</h1>
                             <div className='flex justify-center text-gray-800'>
-                                <img className='w-10 h-10 rounded-full' src={urlFor(singlePost.authorImage).url()} alt={singlePost.name}/>
+                                <img className='w-10 h-10 rounded-full object-cover' src={urlFor(singlePost.authorImage).url()} alt={singlePost.name}/>
                                 <p className='flex items-center pl-2 text-2xl'>{singlePost.name}</p>
                             </div>
                         </div>
