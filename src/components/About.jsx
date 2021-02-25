@@ -27,11 +27,10 @@ export default function About () {
     if (!author) return <div>Loading...</div>
 
     return (
-        <main className='relative'>
-            <img className='absolute w-full bg-white' src={video} alt='plexus background'/>
+        <main className='relative bg-gray-200 min-h-screen'>
             <div className='p-10 lg:pt-48 container mx-auto relative'>
                 <section className='bg-white rounded-lg shadow-2xl lg:flex p-20'>
-                    <img className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' src={urlFor(author.authorImage).url()} alt={author.name}/>
+                    <img className='object-cover rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' src={urlFor(author.authorImage).url()} alt={author.name}/>
                     <div className='text-lg flex flex-col justify-center'>
                         <h1 className='text-6xl text-secondary mb-4'>
                             Hey there, I'm{" "} <span className='text-blue-700'>{author.name}</span>
