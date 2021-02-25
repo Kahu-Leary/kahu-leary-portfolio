@@ -16,17 +16,17 @@ export default function NavBar () {
                         activeClassName='text-primary'>
                         Projects
                     </NavLink>
-                    {/* <NavLink to='/post' 
+                    <NavLink to='/post' 
                         className='inline-flex items-center py-3 px-4 my-6 hover:text-primary'
                         activeClassName='text-primary'>
                         Blog
-                    </NavLink> */}
+                    </NavLink>
                     <NavLink to='/about' 
                         className='inline-flex items-center py-3 px-4 my-6 hover:text-primary'
                         activeClassName='text-primary'>
                         About Me
                     </NavLink>
-                    <NavLink to='/about' 
+                    <NavLink to='/Contact' 
                         className='inline-flex items-center py-3 px-4 my-6 hover:text-primary'
                         activeClassName='text-primary'>
                         Contact

@@ -6,7 +6,7 @@ export default function Home () {
     return (
         <>
         <div className='lg:overflow-hidden'>
-            <div className='absolute inset-0 z-negative bg-secondary lg:opacity-60'>
+            <div className='absolute inset-0 z-negative lg:opacity-60'>
                 <video autoPlay muted loop className='object-cover w-full h-full'>
                     <source src={video} />
                 </video>
