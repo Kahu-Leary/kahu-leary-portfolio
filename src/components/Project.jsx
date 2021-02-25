@@ -26,13 +26,13 @@ export default function Project () {
                 <section className='grid grid-cols-3 gap-8'>
                     {projectData && projectData.map((project, index) => (
 
-                    <a className='text-blue-600 font-bold' href={project.link} rel='noopener noreferrer' target='_blank'>
-                    <article className='relative shadow-xl bg-gray-900 border-2 border-gray-800 p-16 
-                    hover:border-blue-700 hover:text-white transition duration-500 '>
+                    <a className='text-gray-400 font-bold' href={project.link} rel='noopener noreferrer' target='_blank'>
+                    <article className='relative shadow-2xl rounded-xl bg-lightGray borde border-darkGray p-16 
+                    hover:border-white hover:text-white transition duration-500 '>
                         <h3 className='text-3xl font-bold mb-2'>
                             <a href={project.link} alt={project.title} target='_blank' rel='noopener noreferrer'>{project.title}</a>
                         </h3>
-                        <div className='text-blue-200 text-xs space-x-4'>
+                        <div className='text-gray-400 text-xs space-x-4'>
                             <span>
                                 <strong className='font-bold'>Completed on</strong>:{' '}
                                 {new Date(project.date).toLocaleDateString()}
@@ -46,7 +46,7 @@ export default function Project () {
                                 {project.projectType}
                             </span>
                             <p className='my-6 text-lg text-white leading-relaxed'>{project.description}</p>
-                            <a className='text-blue-600 font-bold text-xl' href={project.link} rel='noopener noreferrer' target='_blank'>
+                            <a className='text-yellow-600 font-bold text-xl' href={project.link} rel='noopener noreferrer' target='_blank'>
                                 View the project{' '}
                                 <span role='img' aria-label='right pointer'></span>
                             </a>

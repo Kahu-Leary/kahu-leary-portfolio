@@ -1,6 +1,5 @@
 import React from 'react'
 
-import video from '../video/plexus.mp4'
 
 export default function Contact () {
     return (
@@ -11,7 +10,7 @@ export default function Contact () {
                       <h1 className='text-primary text-6xl mb-4'>
                         Contact Me
                       </h1>
-                      
+
                   </div>
             </section>
         </div>

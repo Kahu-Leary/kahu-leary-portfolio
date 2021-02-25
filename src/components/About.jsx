@@ -3,7 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 
 import sanityClient from '../client'
-import video from '../video/plexus.mp4'
+import video from '../video/plexus.mov'
 
 const builder = imageUrlBuilder(sanityClient)
 
