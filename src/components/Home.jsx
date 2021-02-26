@@ -17,8 +17,8 @@ export default function Home () {
         </div>
         <main>
             <section className='container mx-auto relative min-h-screen pt-12 text-white lg:pt-44 px-8'>
-                <h2 className='text-3xl text-primary'>Hi, my name is</h2>
-                <h1 className='text-8xl text-gray-300'>Kahu Leary</h1>
+                <h2 className='text-3xl text-gray-300'>Hi, my name is</h2>
+                <h1 className='text-8xl text-primary'>Kahu Leary</h1>
                 <h2 className='text-8xl pt-2 text-gray-400'>I build things for the web</h2>
                 <p className='text-2xl text-gray-500 pt-6'>A passionate, hard working full stack developer based in Auckland, New Zealand</p>
 
