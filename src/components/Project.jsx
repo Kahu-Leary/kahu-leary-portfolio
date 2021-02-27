@@ -26,9 +26,9 @@ export default function Project () {
                 <section className='grid grid-cols-3 gap-8'>
                     {projectData && projectData.map((project, index) => (
 
-                    <a className='text-blue-600 font-bold' href={project.link} rel='noopener noreferrer' target='_blank'>
-                    <article className='relative shadow-2xld rounded-xl bg-gray-900 border-2 border-gray-900 p-16 
-                    hover:border-blue-700 hover:text-white transition duration-500 '>
+                    <a className='text-gray-400 font-bold' href={project.link} rel='noopener noreferrer' target='_blank'>
+                    <article className='relative shadow-2xld rounded bg-darkBg border-2 border-darkBg p-16 
+                    hover:border-secondary hover:text-white transition duration-500 '>
                         <h3 className='text-3xl font-bold mb-2'>
                             <a href={project.link} alt={project.title} target='_blank' rel='noopener noreferrer'>{project.title}</a>
                         </h3>
@@ -46,7 +46,7 @@ export default function Project () {
                                 {project.projectType}
                             </span> */}
                             <p className='my-6 text-lg text-white leading-relaxed'>{project.description}</p>
-                            <a className='text-blue-600 font-bold text-xl' href={project.link} rel='noopener noreferrer' target='_blank'>
+                            <a className='text-secondary font-bold text-xl' href={project.link} rel='noopener noreferrer' target='_blank'>
                                 View the project{' '}
                                 <span role='img' aria-label='right pointer'></span>
                             </a>

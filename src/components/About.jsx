@@ -29,14 +29,14 @@ export default function About () {
     return (
         <main className='relative min-h-screen'>
             <div className='lg:overflow-hidden'>
-                <div className='absolute inset-0 z-negative lg:opacity-60'>
+                <div className='absolute inset-0 z-negative'>
                     <video autoPlay muted loop className='object-cover w-full h-full'>
                         <source src={video} />
                     </video>
                 </div>
             </div>
             <div className='p-10 lg:pt-48 container mx-auto relative '>
-                <section className='bg-gray-900 justify-center shadow-2xld rounded-xl lg:flex p-32'>
+                <section className='bg-darkBg justify-center shadow-2xld rounded lg:flex p-32'>
                     <img className='object-cover rounded w-32 h-32 lg:w-64 lg:h-64 mr-28' src={urlFor(author.authorImage).url()} alt={author.name}/>
                     <div className='text-lg flex flex-col justify-center'>
                         <h1 className='text-gray-200 text-6xl text-secondary mb-4'>

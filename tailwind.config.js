@@ -18,8 +18,10 @@ module.exports = {
 
       // primary: '#ff9a00',
       primary: '#ff1616',
-      // secondary: '#4D2B12',
-      secondary: '#242424',
+      secondary: '#2563EB',
+
+      darkBg:'#0c1523',
+      lightBg:'#0e1826',
 
       black: colors.black,
       white: colors.white,
