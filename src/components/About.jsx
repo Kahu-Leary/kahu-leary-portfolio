@@ -36,7 +36,7 @@ export default function About () {
                 </div>
             </div>
             <div className='p-10 lg:pt-48 container mx-auto relative '>
-                <section className='bg-gray-900 justify-center shadow-2xl lg:flex p-32'>
+                <section className='bg-darkBg justify-center shadow-2xld rounded lg:flex p-32'>
                     <img className='object-cover rounded w-32 h-32 lg:w-64 lg:h-64 mr-28' src={urlFor(author.authorImage).url()} alt={author.name}/>
                     <div className='text-lg flex flex-col justify-center'>
                         <h1 className='text-gray-200 text-6xl text-secondary mb-4'>
