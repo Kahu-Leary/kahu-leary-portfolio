@@ -1,52 +1,67 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 
+import video from '../video/plexus.mov'
+
 function sendEmail () {
     return
 }
 
 export default function Contact () {
     return (
-        <>
-        <div className='container mx-auto flex justify-center'>
-            <h1 className='text-white text-5xl mb-14 -mt-10'>
-                Contact Me
+
+        <div className='hidden lg:contents relative lg:min-h-screen'>
+                <div className='absolute inset-0 z-negative'>
+                    <video autoPlay muted loop className='object-cover w-full h-full'>
+                        <source src={video} />
+                    </video>
+                </div>
+
+        <div className='container mx-auto flex justify-center pt-12'>
+            <h1 className='text-white text-4xl mb-10'>
+                Connect with Me
             </h1>
         </div>
-        <div className='lg:pt-2 container mx-auto relative mb-40'>
-            <section className='bg-darkBg shadow-2xld lg:flex p-24 rounded'>
-                <div className='text-lg flex flex-col p-10'>
+        <div className='lg:pt-2 container mx-auto relative px-20'>
+            <section className='bg-darkBg lg:shadow-2xld lg:flex lg:px-32 rounded'>
+                <div className='text-lg flex p-10 lg:py-16'>
 
                     <form className='text-white' onSubmit={sendEmail}>
-                        <h2 className='text-3xl mb-8 -mt-8'>Send me a message</h2>
+                        <h2 className='text-2xl text-center mb-8'>Send me a message</h2>
                         <div className='grid grid-cols-1 gap-5'>
                             <input 
-                              className='border-2 border-gray-600 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-secondary transition duration-700' 
+                              className='border-2 border-yellow-900 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-primary transition duration-700' 
                               type="text" placeholder='Full Name'/>
 
                             <input 
-                              className='border-2 border-gray-600 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-secondary transition duration-700' 
+                              className='border-2 border-yellow-900 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-primary transition duration-700' 
                               type="text" placeholder='Email'/>
 
                             <textarea 
                               placeholder='Your Message'
                               name="message" 
                               id="message" 
-                              cols="60" 
-                              rows="10" 
-                              className='border-2 border-gray-600 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-secondary transition duration-700'>
+                              cols="110" 
+                              rows="6" 
+                              className='border-2 border-yellow-900 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-primary transition duration-700'>
                             </textarea>
                         </div>
-                        <button className='border-gray-600 p-6 mt-8 -mb-20 font-medium border-2 border-secondary rounded 
-                        hover:bg-transparent hover:border-secondary transition duration-700'>Send Message</button>
+
+                        <div className='grid grid-cols-1'>
+                            <button className='p-6 mt-8 border-2 border-yellow-900  
+                            hover:bg-transparent hover:border-primary transition duration-700'>Send Message</button>
+                        </div>
                     </form>
                 </div>
-                <div className='grid grid-cols-1 items-center m-auto space-y-12'>
-                  <SocialIcon url='https://www.linkedin.com/in/kahu-leary-3a6542124/' target='_blank' fgColor='#fff' bgColor='#ff9a00' style={{ height: 75, width: 75}} />
-                  <SocialIcon url='https://github.com/Kahu-Leary' target='_blank' fgColor='#fff' bgColor='#ff9a00' style={{ height: 75, width: 75}} />
+                <div className='container mx-auto lg:py-28 lg:pl-20'>
+                    <h2 className='text-white text-3xl flex justify-center mt-28 lg:mt-0'>Or find me here</h2>
+                    <div className='flex justify-center p-8 lg:p-12 space-x-12'>
+                        <SocialIcon url='https://www.linkedin.com/in/kahu-leary-3a6542124/' target='_blank' fgColor='#fff' bgColor='#ff8a00' style={{ height: 75, width: 75}} />
+                        <SocialIcon url='https://github.com/Kahu-Leary' target='_blank' fgColor='#fff' bgColor='#ff8a00' style={{ height: 75, width: 75}} />
+                    </div>
                 </div>
             </section>
         </div>
-        </>
+        </div>
     )
 }
