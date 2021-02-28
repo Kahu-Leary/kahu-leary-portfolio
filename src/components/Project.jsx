@@ -19,11 +19,11 @@ export default function Project () {
     }, [])
 
     return (
-        <main className='min-h-screen top-0 p-10 absolute min-w-full mt-20'>
+        <main className='top-0 p-10 absolute min-w-full mt-20 lg:mt-36'>
             <section className='container mx-auto relative'>
-                <h1 className='text-gray-200 text-4xl flex justify-center mb-12'>My Portfolio</h1>
+                <h1 className='text-gray-200 text-4xl lg:text-5xl flex justify-center mb-12'>My Portfolio</h1>
 
-                <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {projectData && projectData.map((project, index) => (
 
                     <a className='text-gray-400 font-bold' href={project.link} rel='noopener noreferrer' target='_blank'>
@@ -48,7 +48,7 @@ export default function Project () {
                             <p className='my-6 text-lg text-white leading-relaxed'>{project.description}</p>
                             <a className='text-primary font-bold text-xl' href={project.link} rel='noopener noreferrer' target='_blank'>
                                 View the project{' '}
-                                <span role='img' aria-label='right pointer'></span>
+                                {/* <span role='img' aria-label='right pointer'></span> */}
                             </a>
                         </div>
                     </article>

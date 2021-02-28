@@ -9,9 +9,9 @@ export default function Contact () {
     return (
 
         <>
-        <div className='container mx-auto flex justify-center mt-12'>
-            <h1 className='text-white text-4xl mb-10'>
-                Connect with Me
+        <div className='container mx-auto flex justify-center mt-12 lg:mt-28'>
+            <h1 className='text-white text-4xl lg:text-5xl mb-10'>
+                Connect With Me
             </h1>
         </div>
         <div className='lg:pt-2 container mx-auto relative lg:px-28'>
@@ -19,7 +19,7 @@ export default function Contact () {
                 <div className='text-lg flex p-6 md:p-16 lg:py-16 lg:px-0'>
 
                     <form className='text-white' onSubmit={sendEmail}>
-                        <h2 className='text-3xl text-center mb-8'>Send me a message</h2>
+                        <h2 className='text-2xl text-center mb-8'>Send me a message</h2>
                         <div className='grid grid-cols-1 gap-5'>
                             <input 
                               className='border-2 border-yellow-900 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-primary transition duration-700' 
