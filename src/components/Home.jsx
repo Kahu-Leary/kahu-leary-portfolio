@@ -14,15 +14,15 @@ export default function Home () {
                 <p className='text-l md:text-2xl lg:text-2xl text-gray-500 pt-6'>A passionate, hard working full stack developer based in Auckland, New Zealand</p>
 
                 <div className='grid grid-cols-1 mt-12 space-y-10 md:grid-cols-2 md:space-y-0 lg:inline-flex'>
-                    <NavLink to='/projects'>
-                        <button className='bg-transparent py-5  text-xl md:mr-10 lg:px-16
+                    <NavLink className='' to='/projects'>
+                        <button className='bg-transparent py-5 px-14 text-xl md:mr-10 lg:px-16
                         hover:bg-primary border-2 border-primary transition duration-700'>
                             See My Work
                         </button>
                     </NavLink>
 
-                    <NavLink to='/contact'>
-                        <button className='bg-transparent py-5 text-xl lg:px-16
+                    <NavLink className='flex-1' to='/contact'>
+                        <button className='bg-transparent py-5 px-16 text-xl lg:px-16
                         hover:bg-secondary hover:text-primary border-2 border-secondary transition duration-700'>
                             Contact Me
                         </button>
