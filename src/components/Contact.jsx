@@ -1,9 +1,18 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
+import emailjs from 'emailjs-com'
 
-function sendEmail () {
-    return
-}
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_capgar7', 'template_60b98m3', e.target, 'user_AXTZ3Zzr2y6Om797dTwOE')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  }
 
 export default function Contact () {
     return (
@@ -16,18 +25,18 @@ export default function Contact () {
         </div>
         <div className='lg:pt-2 container mx-auto relative lg:px-28'>
             <section className='bg-darkBg lg:shadow-2xld lg:flex lg:px-32 rounded'>
-                <div className='text-lg flex p-6 md:p-16 lg:py-16 lg:px-0'>
+                <div className='text-lg flex p-6 md:p-16 lg:py-18 lg:px-0'>
 
                     <form className='text-white' onSubmit={sendEmail}>
                         <h2 className='text-2xl text-center mb-8'>Send me a message</h2>
                         <div className='grid grid-cols-1 gap-5'>
                             <input 
                               className='border-2 border-yellow-900 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-primary transition duration-700' 
-                              type="text" placeholder='Full Name'/>
+                              type="text" placeholder='Full Name' name='full_name'/>
 
                             <input 
                               className='border-2 border-yellow-900 bg-lightBg text-white rounded px-4 py-2 focus:outline-none focus:border-primary transition duration-700' 
-                              type="text" placeholder='Email'/>
+                              type="text" placeholder='Email' name='email_address'/>
 
                             <textarea 
                               placeholder='Your Message'

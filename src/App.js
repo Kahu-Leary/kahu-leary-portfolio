@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 import NavBar from './components/NavBar'
 
 import video from './video/plexus.mov'
+// import pic from './images/sky.jpg'
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
 
       <div className='hidden lg:contents relative lg:min-h-screen'>
         <div className='absolute inset-0 z-negative'>
-            <video autoPlay muted loop className='object-cover w-full h-full'>
+            {/* <video autoPlay muted loop className='object-cover w-full h-full'>
               <source src={video} />
-            </video>
+            </video> */}
+            {/* <img className='object-cover w-screen h-screen' src={pic} alt='background'></img> */}
         </div>
       </div>
       <Switch>
