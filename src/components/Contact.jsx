@@ -9,9 +9,9 @@ export default function Contact () {
     return (
 
         <>
-        <div className='container mx-auto flex justify-center mt-12'>
-            <h1 className='text-white text-4xl mb-10'>
-                Connect with Me
+        <div className='container mx-auto flex justify-center mt-12 lg:mt-28'>
+            <h1 className='text-white text-4xl lg:text-5xl mb-10'>
+                Connect With Me
             </h1>
         </div>
         <div className='lg:pt-2 container mx-auto relative lg:px-28'>

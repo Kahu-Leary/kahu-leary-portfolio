@@ -27,11 +27,17 @@ export default function About () {
 
     return (
         <>
-          <div className='mt-28 md:p-10 lg:mt-0 lg:pt-48 container mx-auto relative'>
-              <section className='bg-darkBg p-10 grid grid-cols-1 gap-8 lg:shadow-2xld rounded lg:flex lg:p-32'>
-                  <img className='object-cover rounded justify-self-center w-32 h-32 lg:w-64 lg:h-64' src={urlFor(author.authorImage).url()} alt={author.name}/>
+        <div className='container mx-auto flex justify-center mt-12 lg:mt-28'>
+            <h1 className='text-white text-4xl lg:text-5xl'>
+                About Me
+            </h1>
+        </div>
+
+          <div className='mt-12 md:p-10 lg:-mt-2 lg:pt-20 container mx-auto relative'>
+              <section className='bg-darkBg p-10 grid grid-cols-1 gap-8 lg:shadow-2xld rounded lg:flex lg:justify-center lg:p-24'>
+                  <img className='object-cover rounded justify-self-center w-32 h-32 lg:w-64 lg:h-64 lg:mr-20' src={urlFor(author.authorImage).url()} alt={author.name}/>
                   <div className='text-lg lg:flex lg:flex-col justify-center'>
-                      <h1 className='text-gray-200 text-2xl text-secondary mb-4'>
+                      <h1 className='text-gray-200 text-2xl lg:text-6xl text-secondary mb-4'>
                           Hey there, I'm{" "} <span className='text-primary'>{author.name}</span>
                           {/* <span className='text-primary'>{author.name}</span> */}
                       </h1>
