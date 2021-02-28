@@ -16,10 +16,12 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
 
-      // primary: '#ff9a00',
-      primary: '#ff1616',
-      // secondary: '#4D2B12',
-      secondary: '#242424',
+      primary: '#ff7a00',
+      // primary: '#ff1616',
+      secondary: '#fff',
+
+      lightBg:'#181818',
+      darkBg:'#121212',
 
       black: colors.black,
       white: colors.white,
@@ -135,6 +137,7 @@ module.exports = {
       lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      '2xld': '0 25px 50px -12px rgba(0, 0, 0, 1)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
     },
