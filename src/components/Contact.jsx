@@ -45,7 +45,7 @@ export default function Contact () {
                         </div>
                     </form>
                 </div>
-                <div className='container mx-auto lg:py-16 lg:pl-28'>
+                <div className='container mx-auto py-12 lg:py-16 lg:pl-28'>
                     <h2 className='text-white text-3xl flex justify-center mt-6 lg:mt-0'>Or find me here</h2>
                     <div className='flex justify-center p-8 lg:p-12 space-x-12'>
                         <SocialIcon url='https://www.linkedin.com/in/kahu-leary-3a6542124/' target='_blank' fgColor='#fff' bgColor='#ff8a00' style={{ height: 75, width: 75}} />
