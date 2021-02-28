@@ -16,12 +16,12 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
 
-      // primary: '#ff9a00',
-      primary: '#ff1616',
-      secondary: '#2563EB',
+      primary: '#ff7a00',
+      // primary: '#ff1616',
+      secondary: '#fff',
 
-      darkBg:'#0c1523',
-      lightBg:'#0e1826',
+      lightBg:'#181818',
+      darkBg:'#121212',
 
       black: colors.black,
       white: colors.white,
