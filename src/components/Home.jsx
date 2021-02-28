@@ -1,22 +1,11 @@
 import React from 'react'
 
-// import Project from './Project'
-// import About from './About'
-// import Contact from './Contact'
-import video from '../video/plexus.mov'
-
 export default function Home () {
     return (
        <>
-        <div className='hidden lg:contents'>
-            <div className='absolute inset-0 z-negative'>
-                <video autoPlay muted loop playsinline className='object-cover w-full h-full'>
-                    <source src={video} />
-                </video>
-            </div>
-        </div>
 
-        <main className='lg:bg-darkBg lg:bg-opacity-30 lg:min-h-screen lg:absolute lg:top-0 lg:container lg:min-w-full'>
+        <main className='lg:min-h-screen lg:absolute lg:top-0 lg:container lg:min-w-full'>
+
             <section className='container mx-auto relative text-white pt-20 md:pt-44 lg:pt-72 px-12'>
                 <h2 className='text-xl md:text-3xl lg:text-4xl text-gray-300'>Hi, my name is</h2>
                 <h1 className='text-5xl md:text-6xl lg:text-8xl text-primary'>Kahu Leary</h1>
@@ -32,9 +21,6 @@ export default function Home () {
                 </div>
             </section>
 
-            {/* <Project />
-            <Contact />
-            <About /> */}
         </main>
        </>
     )
