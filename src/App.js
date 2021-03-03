@@ -2,13 +2,13 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import Home from './components/Home'
 import About from './components/About'
-import SinglePost from './components/SinglePost'
-import Post from './components/Post'
+// import SinglePost from './components/SinglePost'
+// import Post from './components/Post'
 import Project from './components/Project'
 import Contact from './components/Contact'
 import NavBar from './components/NavBar'
 
-import video from './video/plexus.mov'
+// import video from './video/plexus.mov'
 // import pic from './images/sky.jpg'
 
 function App() {
