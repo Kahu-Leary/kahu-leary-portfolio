@@ -1,6 +1,7 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import emailjs from 'emailjs-com'
+import { motion } from 'framer-motion'
 
   function sendEmail(e) {
     e.preventDefault();
@@ -15,9 +16,32 @@ import emailjs from 'emailjs-com'
   }
 
 export default function Contact () {
+
+    const pageVariants = {
+     hidden: {
+         y: '100vw',
+         opacity: 0
+     },
+     visible: {
+         y: 0,
+         opacity: 1,
+         transition: { duration: 1.5 }
+     },
+     exit: {
+         y: '100vw',
+         opacity: 0,
+         transition: { ease: 'easeInOut', duration: 1 }
+     }
+    }
+
     return (
 
-        <>
+        <motion.div 
+            variants={pageVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'>
+
         <div className='container mx-auto flex justify-center mt-12 lg:mt-28'>
             <h1 className='text-white text-4xl lg:text-5xl mb-10'>
                 Connect With Me
@@ -63,6 +87,6 @@ export default function Contact () {
                 </div>
             </section>
         </div>
-        </>
+        </motion.div>
     )
 }

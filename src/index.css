@@ -2,6 +2,8 @@
 @tailwind base;
 @tailwind components;
 
+:root{ scrollbar-width: none !important }
+
 /* .header {
     height: auto;
 }

@@ -1,8 +1,24 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
 import sanityClient from '../client.js'
 
 export default function Project () {
     const [projectData, setProjectData] = useState(null)
+
+    const pageVariants = {
+     hidden: {
+         x: '100vw'
+     },
+     visible: {
+         x: 0,
+         transition: { duration: 1.5 }
+     },
+     exit: {
+         x: '100vw',
+         transition: { ease: 'easeInOut', duration: 1 }
+     }
+    }
 
     useEffect(() => {
         sanityClient.fetch(`*[_type == "project"]{
@@ -19,8 +35,13 @@ export default function Project () {
     }, [])
 
     return (
-        <main className='top-0 p-10 absolute min-w-full mt-20 lg:mt-36'>
-            <section className='container mx-auto relative'>
+        <motion.main className='top-0 p-10 absolute min-w-full mt-20 lg:mt-36'
+            variants={pageVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'>
+
+            <section className='container mx-auto relative overscroll-none'>
                 <h1 className='text-gray-200 text-4xl lg:text-5xl flex justify-center mb-12'>My Portfolio</h1>
 
                 <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -56,6 +77,6 @@ export default function Project () {
                     ))}
                 </section>
             </section>
-        </main>
+        </motion.main>
     )
 }

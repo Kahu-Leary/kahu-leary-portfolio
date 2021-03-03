@@ -4,10 +4,28 @@ import Typewriter from 'typewriter-effect'
 import { motion } from 'framer-motion'
 
 export default function Home () {
+
+    const pageVariants = {
+     hidden: {
+         opacity: 0
+     },
+     visible: {
+         opacity: 1,
+         transition: { duration: 1.5 }
+     },
+     exit: {
+         opacity: 0,
+         transition: { ease: 'easeInOut', duration: 1 }
+     }
+    }
+
     return (
        <>
-
-        <main className='lg:min-h-screen lg:absolute lg:top-0 lg:container lg:min-w-full'>
+        <motion.main className='lg:min-h-screen lg:absolute lg:top-0 lg:container lg:min-w-full' 
+            variants={pageVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'>
 
             <section className='container mx-auto relative text-white pt-20 md:pt-44 lg:pt-72 px-12'>
                 <motion.h2 className='text-xl md:text-3xl lg:text-4xl text-gray-300' animate={{}}>Hi, my name is</motion.h2>
@@ -38,7 +56,7 @@ export default function Home () {
                 </div>
             </section>
 
-        </main>
+        </motion.main>
        </>
     )
 }

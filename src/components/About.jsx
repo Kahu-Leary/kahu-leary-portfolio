@@ -3,6 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 
 import sanityClient from '../client'
+import { motion } from 'framer-motion'
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -11,7 +12,22 @@ function urlFor (source) {
 }
 
 export default function About () {
+
     const [author, setAuthor] = useState(null)
+
+    const pageVariants = {
+     hidden: {
+         x: '-100vw'
+     },
+     visible: {
+         x: 0,
+         transition: { duration: 1.5 }
+     },
+     exit: {
+         x: '-100vw',
+         transition: { ease: 'easeInOut', duration: 1 }
+     }
+    }
 
     useEffect(() => {
         sanityClient.fetch(`*[_type == "author"]{
@@ -26,8 +42,14 @@ export default function About () {
     if (!author) return <></>
 
     return (
-        <>
-        <div className='container mx-auto flex justify-center mt-12 lg:mt-28'>
+
+        <motion.div 
+            variants={pageVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'>
+
+        <div className='container mx-auto overscroll-none flex justify-center mt-12 lg:mt-28'>
             <h1 className='text-white text-4xl lg:text-5xl'>
                 About Me
             </h1>
@@ -47,6 +69,6 @@ export default function About () {
                   </div>
               </section>
           </div>
-        </>
+        </motion.div>
     )
 }
