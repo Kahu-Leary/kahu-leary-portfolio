@@ -1,4 +1,5 @@
-import {BrowserRouter, Route, Switch} from 'react-router-dom' 
+import { Route, Switch, useLocation } from 'react-router-dom' 
+import { AnimatePresence } from 'framer-motion'
 
 import Home from './components/Home'
 import About from './components/About'
@@ -12,8 +13,10 @@ import NavBar from './components/NavBar'
 // import pic from './images/sky.jpg'
 
 function App() {
+  const location = useLocation()
+
   return (
-    <BrowserRouter>
+    <>
       <NavBar />
 
       <div className='hidden lg:contents relative lg:min-h-screen'>
@@ -24,7 +27,8 @@ function App() {
             {/* <img className='object-cover w-screen h-screen' src={pic} alt='background'></img> */}
         </div>
       </div>
-      <Switch>
+    <AnimatePresence>
+      <Switch location={location} key={location.key}>
 
         <Route component={Home} path='/' exact />
         <Route component={About} path='/about' />
@@ -34,7 +38,9 @@ function App() {
         <Route component={Project} path='/projects' />
 
       </Switch>
-    </BrowserRouter>
+    </AnimatePresence>
+    </>
+
   )
 
 }
