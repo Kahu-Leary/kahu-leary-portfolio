@@ -8,14 +8,17 @@ export default function Project () {
 
     const pageVariants = {
      hidden: {
-         x: '100vw'
+         x: '100vw',
+         opacity: 0
      },
      visible: {
          x: 0,
-         transition: { duration: 1.5 }
+         opacity: 1,
+         transition: { duration: 1 }
      },
      exit: {
          x: '100vw',
+         opacity: 0,
          transition: { ease: 'easeInOut', duration: 1 }
      }
     }
