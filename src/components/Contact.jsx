@@ -25,7 +25,7 @@ export default function Contact () {
      visible: {
          y: 0,
          opacity: 1,
-         transition: { duration: 1.5 }
+         transition: { duration: 1 }
      },
      exit: {
          y: '100vw',
@@ -37,6 +37,7 @@ export default function Contact () {
     return (
 
         <motion.div 
+            className='absolute w-full'
             variants={pageVariants}
             initial='hidden'
             animate='visible'
@@ -47,7 +48,7 @@ export default function Contact () {
                 Connect With Me
             </h1>
         </div>
-        <div className='lg:pt-2 container mx-auto relative lg:px-28'>
+        <div className='lg:pt-2 container mx-auto lg:px-28'>
             <section className='bg-darkBg lg:shadow-2xld lg:flex lg:px-32 rounded'>
                 <div className='text-lg flex p-6 md:p-16 lg:py-18 lg:px-0'>
 
